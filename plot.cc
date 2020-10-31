@@ -18,12 +18,13 @@ int main() {
 
   fnames.push_back("stats_O0.root");
   fnames.push_back("stats_Os.root");
+  fnames.push_back("stats_O2.root");
 
 
  std::vector<EColor> colors;
   colors.push_back(kRed);
   colors.push_back(kOrange);
-  // colors.push_back(kYellow);
+  colors.push_back(kYellow);
   // colors.push_back(kSpring);
   // colors.push_back(kGreen);
   // colors.push_back(kTeal);
