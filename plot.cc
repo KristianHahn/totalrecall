@@ -16,10 +16,11 @@ int main() {
 
   std::vector<std::string> fnames;
 
-  fnames.push_back("stats_O0.root");
-  fnames.push_back("stats_Os.root");
-  fnames.push_back("stats_O2.root");
-  fnames.push_back("stats_O2_RT.root");
+  fnames.push_back("results/stats_Os.root");
+  fnames.push_back("results/stats_O0.root");
+  fnames.push_back("results/stats_O2.root");
+  fnames.push_back("results/stats_O2_RT.root");
+  fnames.push_back("results/stats_O2_RT_dropcache.root");
 
 
  std::vector<EColor> colors;
@@ -27,8 +28,8 @@ int main() {
   colors.push_back(kOrange);
   colors.push_back(kYellow);
   colors.push_back(kSpring);
-  // colors.push_back(kGreen);
-  // colors.push_back(kTeal);
+  //  colors.push_back(kGreen);
+  colors.push_back(kTeal);
   // colors.push_back(kCyan);
   // colors.push_back(kAzure);
   // colors.push_back(kBlue);
@@ -93,7 +94,7 @@ int main() {
     leg->AddEntry(fnames[i].c_str(),fnames[i].c_str(),"LP");
   }
   leg->Draw("same");
-  c->Print("memcpy.png");
+  c->Print("results/memcpy.png");
 
 
   TCanvas * cc = new TCanvas("cc","cc",0,0,1800,1200);
@@ -107,7 +108,7 @@ int main() {
     lleg->AddEntry(fnames[i].c_str(),fnames[i].c_str(),"LP");
   }
   lleg->Draw("same");
-  cc->Print("memset.png");
+  cc->Print("results/memset.png");
 
 
   TCanvas * ccc = new TCanvas("ccc","ccc",0,0,1800,1200);
@@ -121,7 +122,7 @@ int main() {
     llleg->AddEntry(fnames[i].c_str(),fnames[i].c_str(),"LP");
   }
   llleg->Draw("same");
-  ccc->Print("fwrite.png");    
+  ccc->Print("results/fwrite.png");    
 
 
 
