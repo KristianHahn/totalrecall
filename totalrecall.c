@@ -100,7 +100,10 @@ int main () {
 #else
     memcpy(mem_handle_dest, mem_handle_src, BYTES);
 #endif
-    dummy_val = mem_handle_dest[0]; // prevent optimizing away /w O1 & higher...
+
+    // prevent optimizing away /w O1 & higher...
+    dummy_val = mem_handle_dest[0]; 
+
     free(mem_handle_src);
     free(mem_handle_dest);
   }
@@ -128,6 +131,10 @@ int main () {
     memset(mem_handle_dest, 0xab+i, BYTES);  
     t_stop[i]=gltime();
 
+    // prevent optimizing away /w O1 & higher...
+    dummy_val += mem_handle_src[0];
+    dummy_val += mem_handle_dest[0];    
+    
     free(mem_handle_src);
     free(mem_handle_dest);
   }

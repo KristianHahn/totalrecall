@@ -1,0 +1,259 @@
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1048576 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1048576 (1.0 MB, 1024 KB)
+memcpy 0.098 GB in 0.002 s, rate: 43.890449 bufsize: 1.0
+memset 0.195 GB in 0.034 s, rate: 5.746006 bufsize: 1.0
+fwrite 0.098 GB in 0.007 s, rate: 14.617011 bufsize: 1.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=2097152 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 2097152 (2.0 MB, 2048 KB)
+memcpy 0.195 GB in 0.005 s, rate: 36.782015 bufsize: 2.0
+memset 0.391 GB in 0.071 s, rate: 5.479764 bufsize: 2.0
+fwrite 0.195 GB in 0.013 s, rate: 15.013644 bufsize: 2.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=4194304 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 4194304 (4.0 MB, 4096 KB)
+memcpy 0.391 GB in 0.011 s, rate: 36.259631 bufsize: 4.0
+memset 0.781 GB in 0.087 s, rate: 8.999228 bufsize: 4.0
+fwrite 0.391 GB in 0.026 s, rate: 15.028084 bufsize: 4.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=8388608 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 8388608 (8.0 MB, 8192 KB)
+memcpy 0.781 GB in 0.036 s, rate: 21.781861 bufsize: 8.0
+memset 1.562 GB in 0.135 s, rate: 11.561570 bufsize: 8.0
+fwrite 0.781 GB in 0.058 s, rate: 13.396378 bufsize: 8.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=16777216 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 16777216 (16.0 MB, 16384 KB)
+memcpy 1.562 GB in 0.148 s, rate: 10.536076 bufsize: 16.0
+memset 3.125 GB in 0.268 s, rate: 11.642680 bufsize: 16.0
+fwrite 1.562 GB in 0.237 s, rate: 6.586463 bufsize: 16.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=33554432 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 33554432 (32.0 MB, 32768 KB)
+memcpy 3.125 GB in 0.338 s, rate: 9.243894 bufsize: 32.0
+memset 6.250 GB in 0.634 s, rate: 9.856443 bufsize: 32.0
+fwrite 3.125 GB in 0.507 s, rate: 6.159165 bufsize: 32.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=67108864 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 67108864 (64.0 MB, 65536 KB)
+memcpy 6.250 GB in 0.673 s, rate: 9.289398 bufsize: 64.0
+memset 12.500 GB in 1.234 s, rate: 10.132090 bufsize: 64.0
+fwrite 6.250 GB in 1.019 s, rate: 6.136228 bufsize: 64.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=71303168 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 71303168 (68.0 MB, 69632 KB)
+memcpy 6.641 GB in 0.714 s, rate: 9.299254 bufsize: 68.0
+memset 13.281 GB in 1.312 s, rate: 10.122456 bufsize: 68.0
+fwrite 6.641 GB in 1.081 s, rate: 6.144119 bufsize: 68.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=73400320 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 73400320 (70.0 MB, 71680 KB)
+memcpy 6.836 GB in 0.733 s, rate: 9.323415 bufsize: 70.0
+memset 13.672 GB in 1.342 s, rate: 10.184446 bufsize: 70.0
+fwrite 6.836 GB in 1.116 s, rate: 6.122737 bufsize: 70.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=74448896 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 74448896 (71.0 MB, 72704 KB)
+memcpy 6.934 GB in 0.745 s, rate: 9.305863 bufsize: 71.0
+memset 13.867 GB in 1.362 s, rate: 10.179374 bufsize: 71.0
+fwrite 6.934 GB in 1.129 s, rate: 6.141299 bufsize: 71.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=75497472 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 75497472 (72.0 MB, 73728 KB)
+memcpy 7.031 GB in 0.744 s, rate: 9.452625 bufsize: 72.0
+memset 14.062 GB in 1.385 s, rate: 10.156245 bufsize: 72.0
+fwrite 7.031 GB in 1.142 s, rate: 6.158342 bufsize: 72.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=76546048 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 76546048 (73.0 MB, 74752 KB)
+memcpy 7.129 GB in 0.471 s, rate: 15.146777 bufsize: 73.0
+memset 14.258 GB in 1.404 s, rate: 10.153850 bufsize: 73.0
+fwrite 7.129 GB in 1.158 s, rate: 6.153948 bufsize: 73.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=77594624 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 77594624 (74.0 MB, 75776 KB)
+memcpy 7.227 GB in 0.474 s, rate: 15.246363 bufsize: 74.0
+memset 14.453 GB in 1.429 s, rate: 10.116199 bufsize: 74.0
+fwrite 7.227 GB in 1.176 s, rate: 6.145590 bufsize: 74.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=79691776 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 79691776 (76.0 MB, 77824 KB)
+memcpy 7.422 GB in 0.485 s, rate: 15.311454 bufsize: 76.0
+memset 14.844 GB in 1.466 s, rate: 10.122759 bufsize: 76.0
+fwrite 7.422 GB in 1.213 s, rate: 6.118298 bufsize: 76.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=104857600 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 104857600 (100.0 MB, 102400 KB)
+memcpy 9.766 GB in 0.626 s, rate: 15.596054 bufsize: 100.0
+memset 19.531 GB in 1.911 s, rate: 10.218012 bufsize: 100.0
+fwrite 9.766 GB in 1.596 s, rate: 6.119733 bufsize: 100.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=134217728 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 134217728 (128.0 MB, 131072 KB)
+memcpy 12.500 GB in 0.769 s, rate: 16.259782 bufsize: 128.0
+memset 25.000 GB in 2.430 s, rate: 10.290014 bufsize: 128.0
+fwrite 12.500 GB in 2.030 s, rate: 6.158961 bufsize: 128.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=167772160 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 167772160 (160.0 MB, 163840 KB)
+memcpy 15.625 GB in 0.953 s, rate: 16.403183 bufsize: 160.0
+memset 31.250 GB in 3.024 s, rate: 10.332823 bufsize: 160.0
+fwrite 15.625 GB in 2.534 s, rate: 6.166335 bufsize: 160.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=201326592 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 201326592 (192.0 MB, 196608 KB)
+memcpy 18.750 GB in 1.117 s, rate: 16.791416 bufsize: 192.0
+memset 37.500 GB in 3.609 s, rate: 10.390716 bufsize: 192.0
+fwrite 18.750 GB in 3.048 s, rate: 6.151726 bufsize: 192.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=234881024 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 234881024 (224.0 MB, 229376 KB)
+memcpy 21.875 GB in 1.306 s, rate: 16.754672 bufsize: 224.0
+memset 43.750 GB in 4.204 s, rate: 10.406307 bufsize: 224.0
+fwrite 21.875 GB in 3.547 s, rate: 6.167137 bufsize: 224.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=268435456 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 268435456 (256.0 MB, 262144 KB)
+memcpy 25.000 GB in 1.473 s, rate: 16.971532 bufsize: 256.0
+memset 50.000 GB in 4.805 s, rate: 10.405611 bufsize: 256.0
+fwrite 25.000 GB in 4.055 s, rate: 6.165584 bufsize: 256.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=335544320 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 335544320 (320.0 MB, 327680 KB)
+memcpy 31.250 GB in 1.831 s, rate: 17.064418 bufsize: 320.0
+memset 62.500 GB in 5.995 s, rate: 10.425869 bufsize: 320.0
+fwrite 31.250 GB in 5.052 s, rate: 6.186058 bufsize: 320.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=402653184 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 402653184 (384.0 MB, 393216 KB)
+memcpy 37.500 GB in 2.157 s, rate: 17.382509 bufsize: 384.0
+memset 75.000 GB in 7.193 s, rate: 10.426844 bufsize: 384.0
+fwrite 37.500 GB in 6.023 s, rate: 6.225759 bufsize: 384.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=469762048 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 469762048 (448.0 MB, 458752 KB)
+memcpy 43.750 GB in 2.515 s, rate: 17.392742 bufsize: 448.0
+memset 87.500 GB in 8.383 s, rate: 10.438305 bufsize: 448.0
+fwrite 43.750 GB in 7.094 s, rate: 6.167370 bufsize: 448.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=536870912 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 536870912 (512.0 MB, 524288 KB)
+memcpy 50.000 GB in 2.868 s, rate: 17.433375 bufsize: 512.0
+memset 100.000 GB in 9.571 s, rate: 10.448595 bufsize: 512.0
+fwrite 50.000 GB in 8.066 s, rate: 6.198871 bufsize: 512.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=805306368 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 805306368 (768.0 MB, 786432 KB)
+memcpy 75.000 GB in 4.277 s, rate: 17.534205 bufsize: 768.0
+memset 150.000 GB in 14.359 s, rate: 10.446601 bufsize: 768.0
+fwrite 75.000 GB in 12.170 s, rate: 6.162788 bufsize: 768.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1073741824 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1073741824 (1024.0 MB, 1048576 KB)
+memcpy 100.000 GB in 5.711 s, rate: 17.509369 bufsize: 1024.0
+memset 200.000 GB in 19.120 s, rate: 10.460505 bufsize: 1024.0
+fwrite 100.000 GB in 16.154 s, rate: 6.190524 bufsize: 1024.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1107296256 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1107296256 (1056.0 MB, 1081344 KB)
+memcpy 103.125 GB in 5.902 s, rate: 17.472526 bufsize: 1056.0
+memset 206.250 GB in 19.692 s, rate: 10.473958 bufsize: 1056.0
+fwrite 103.125 GB in 16.677 s, rate: 6.183547 bufsize: 1056.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1140850688 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1140850688 (1088.0 MB, 1114112 KB)
+memcpy 106.250 GB in 6.060 s, rate: 17.531997 bufsize: 1088.0
+memset 212.500 GB in 20.318 s, rate: 10.458812 bufsize: 1088.0
+fwrite 106.250 GB in 17.178 s, rate: 6.185202 bufsize: 1088.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1174405120 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1174405120 (1120.0 MB, 1146880 KB)
+memcpy 109.375 GB in 6.242 s, rate: 17.522875 bufsize: 1120.0
+memset 218.750 GB in 20.874 s, rate: 10.479728 bufsize: 1120.0
+fwrite 109.375 GB in 17.653 s, rate: 6.195736 bufsize: 1120.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1207959552 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1207959552 (1152.0 MB, 1179648 KB)
+memcpy 112.500 GB in 6.305 s, rate: 17.842430 bufsize: 1152.0
+memset 225.000 GB in 21.472 s, rate: 10.478946 bufsize: 1152.0
+fwrite 112.500 GB in 18.173 s, rate: 6.190559 bufsize: 1152.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1241513984 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1241513984 (1184.0 MB, 1212416 KB)
+memcpy 115.625 GB in 6.552 s, rate: 17.648056 bufsize: 1184.0
+memset 231.250 GB in 22.070 s, rate: 10.477922 bufsize: 1184.0
+fwrite 115.625 GB in 18.684 s, rate: 6.188333 bufsize: 1184.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1275068416 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1275068416 (1216.0 MB, 1245184 KB)
+memcpy 118.750 GB in 6.716 s, rate: 17.680582 bufsize: 1216.0
+memset 237.500 GB in 22.673 s, rate: 10.474810 bufsize: 1216.0
+fwrite 118.750 GB in 19.231 s, rate: 6.174842 bufsize: 1216.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1308622848 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1308622848 (1248.0 MB, 1277952 KB)
+memcpy 121.875 GB in 6.935 s, rate: 17.573875 bufsize: 1248.0
+memset 243.750 GB in 23.246 s, rate: 10.485593 bufsize: 1248.0
+fwrite 121.875 GB in 19.647 s, rate: 6.203157 bufsize: 1248.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1342177280 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1342177280 (1280.0 MB, 1310720 KB)
+memcpy 125.000 GB in 7.129 s, rate: 17.534358 bufsize: 1280.0
+memset 250.000 GB in 23.852 s, rate: 10.481287 bufsize: 1280.0
+fwrite 125.000 GB in 20.204 s, rate: 6.186960 bufsize: 1280.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1610612736 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1610612736 (1536.0 MB, 1572864 KB)
+memcpy 150.000 GB in 8.503 s, rate: 17.641212 bufsize: 1536.0
+memset 300.000 GB in 28.583 s, rate: 10.495634 bufsize: 1536.0
+fwrite 150.000 GB in 24.252 s, rate: 6.185093 bufsize: 1536.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1879048192 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1879048192 (1792.0 MB, 1835008 KB)
+memcpy 175.000 GB in 9.889 s, rate: 17.696323 bufsize: 1792.0
+memset 350.000 GB in 33.244 s, rate: 10.528329 bufsize: 1792.0
+fwrite 175.000 GB in 28.293 s, rate: 6.185199 bufsize: 1792.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=2147483648 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 2147483648 (2048.0 MB, 2097152 KB)
+memcpy 200.000 GB in 11.287 s, rate: 17.718998 bufsize: 2048.0
+memset 400.000 GB in 37.967 s, rate: 10.535359 bufsize: 2048.0
+fwrite 200.000 GB in 32.303 s, rate: 6.191370 bufsize: 2048.0
+
