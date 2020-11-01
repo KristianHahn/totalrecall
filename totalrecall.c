@@ -23,7 +23,7 @@
 
 #include <sys/mman.h>
 
-#define NTRIALS 100
+//#define NTRIALS 100
 //#define BYTES   72*1024*1024 //+16 +17;//*1024
   
 
@@ -58,8 +58,9 @@ int main () {
   //  __asm__(".symver memcpy,memcpy@GLIBC_2.2.5");
   //  __asm__(".symver memcpy,memcpy@GLIBC_2.14");
   
-
+#ifndef FOREVER
   uint64_t t_start[NTRIALS], t_stop[NTRIALS];
+#endif
   uint64_t diff;
   double total_gbytes, total_seconds   ;
   char *mem_handle_src, *mem_handle_dest;
@@ -68,7 +69,8 @@ int main () {
 	 BYTES,
 	 (double)BYTES/(1024*1024),
 	 (double)BYTES/1024);
-  
+
+  int dummy_val=0;
 #ifdef FOREVER  
   while(1) {
 #else
@@ -77,8 +79,13 @@ int main () {
     mem_handle_src  = malloc(BYTES); //volatile
     mem_handle_dest = malloc(BYTES);  
 
+#ifndef FOREVER
     memset(mem_handle_src, 0xab*i, BYTES);
     memset(mem_handle_dest, 0xfa*i*i, BYTES);
+#else
+    memset(mem_handle_src, 0xab, BYTES);
+    memset(mem_handle_dest, 0xfa, BYTES);
+#endif    
 
 #ifdef DROP_CACHE
     FILE * cache_file = fopen("/proc/sys/vm/drop_caches", "wr");
@@ -93,9 +100,11 @@ int main () {
 #else
     memcpy(mem_handle_dest, mem_handle_src, BYTES);
 #endif
+    dummy_val = mem_handle_dest[0]; // prevent optimizing away /w O1 & higher...
     free(mem_handle_src);
     free(mem_handle_dest);
   }
+#ifndef FOREVER
   diff=0;
   for( int i=0; i<NTRIALS; i++ ) 
     diff += (t_stop[i] - t_start[i]);
@@ -105,7 +114,7 @@ int main () {
 	 total_gbytes,total_seconds,
 	 total_gbytes/total_seconds,
 	 (double)BYTES/(1024*1024));
-
+#endif
 
 
 #ifdef DO_MEMSET
@@ -168,4 +177,5 @@ int main () {
   //----------------------------------------------------------------------------------
 #endif
 
+  return dummy_val;
 }
