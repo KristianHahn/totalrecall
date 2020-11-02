@@ -1,180 +1,222 @@
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=1048576 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1048576 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 1048576 (1.0 MB, 1024 KB)
-memcpy 0.098 GB in 0.012 s, rate: 7.989548 bufsize: 1.0
-memset 0.195 GB in 0.069 s, rate: 2.838432 bufsize: 1.0
+memcpy 0.098 GB in 0.014 s, rate: 7.149067 bufsize: 1.0
+memset 0.195 GB in 0.079 s, rate: 2.487360 bufsize: 1.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=2097152 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=2097152 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 2097152 (2.0 MB, 2048 KB)
-memcpy 0.195 GB in 0.033 s, rate: 5.862951 bufsize: 2.0
-memset 0.391 GB in 0.144 s, rate: 2.710622 bufsize: 2.0
+memcpy 0.195 GB in 0.034 s, rate: 5.731505 bufsize: 2.0
+memset 0.391 GB in 0.146 s, rate: 2.673975 bufsize: 2.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=4194304 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=4194304 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 4194304 (4.0 MB, 4096 KB)
-memcpy 0.391 GB in 0.076 s, rate: 5.146574 bufsize: 4.0
-memset 0.781 GB in 0.296 s, rate: 2.636348 bufsize: 4.0
+memcpy 0.391 GB in 0.076 s, rate: 5.113428 bufsize: 4.0
+memset 0.781 GB in 0.298 s, rate: 2.624604 bufsize: 4.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=8388608 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=8388608 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 8388608 (8.0 MB, 8192 KB)
-memcpy 0.781 GB in 0.176 s, rate: 4.446652 bufsize: 8.0
-memset 1.562 GB in 0.625 s, rate: 2.498709 bufsize: 8.0
+memcpy 0.781 GB in 0.180 s, rate: 4.328734 bufsize: 8.0
+memset 1.562 GB in 0.594 s, rate: 2.629214 bufsize: 8.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=16777216 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=16777216 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 16777216 (16.0 MB, 16384 KB)
-memcpy 1.562 GB in 0.391 s, rate: 3.998925 bufsize: 16.0
-memset 3.125 GB in 1.536 s, rate: 2.034985 bufsize: 16.0
+memcpy 1.562 GB in 0.390 s, rate: 4.003649 bufsize: 16.0
+memset 3.125 GB in 1.685 s, rate: 1.854470 bufsize: 16.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=33554432 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=33554432 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 33554432 (32.0 MB, 32768 KB)
-memcpy 3.125 GB in 0.880 s, rate: 3.550983 bufsize: 32.0
-memset 6.250 GB in 3.200 s, rate: 1.953271 bufsize: 32.0
+memcpy 3.125 GB in 0.840 s, rate: 3.719795 bufsize: 32.0
+memset 6.250 GB in 3.478 s, rate: 1.796864 bufsize: 32.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=67108864 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=67108864 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 67108864 (64.0 MB, 65536 KB)
-memcpy 6.250 GB in 1.835 s, rate: 3.405245 bufsize: 64.0
-memset 12.500 GB in 6.812 s, rate: 1.834987 bufsize: 64.0
+memcpy 6.250 GB in 1.851 s, rate: 3.376577 bufsize: 64.0
+memset 12.500 GB in 6.633 s, rate: 1.884652 bufsize: 64.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=71303168 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=71303168 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 71303168 (68.0 MB, 69632 KB)
-memcpy 6.641 GB in 1.950 s, rate: 3.405581 bufsize: 68.0
-memset 13.281 GB in 7.242 s, rate: 1.834043 bufsize: 68.0
+memcpy 6.641 GB in 1.895 s, rate: 3.503918 bufsize: 68.0
+memset 13.281 GB in 7.006 s, rate: 1.895644 bufsize: 68.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=73400320 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=73400320 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 73400320 (70.0 MB, 71680 KB)
-memcpy 6.836 GB in 2.033 s, rate: 3.362450 bufsize: 70.0
-memset 13.672 GB in 7.603 s, rate: 1.798230 bufsize: 70.0
+memcpy 6.836 GB in 2.003 s, rate: 3.412490 bufsize: 70.0
+memset 13.672 GB in 7.343 s, rate: 1.861921 bufsize: 70.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=74448896 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=74448896 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 74448896 (71.0 MB, 72704 KB)
-memcpy 6.934 GB in 2.032 s, rate: 3.412176 bufsize: 71.0
-memset 13.867 GB in 7.628 s, rate: 1.817989 bufsize: 71.0
+memcpy 6.934 GB in 2.041 s, rate: 3.397303 bufsize: 71.0
+memset 13.867 GB in 7.491 s, rate: 1.851252 bufsize: 71.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=75497472 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=75497472 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 75497472 (72.0 MB, 73728 KB)
-memcpy 7.031 GB in 2.126 s, rate: 3.307642 bufsize: 72.0
-memset 14.062 GB in 7.496 s, rate: 1.876043 bufsize: 72.0
+memcpy 7.031 GB in 2.049 s, rate: 3.431462 bufsize: 72.0
+memset 14.062 GB in 7.478 s, rate: 1.880576 bufsize: 72.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=76546048 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=76546048 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 76546048 (73.0 MB, 74752 KB)
-memcpy 7.129 GB in 2.048 s, rate: 3.480541 bufsize: 73.0
-memset 14.258 GB in 7.653 s, rate: 1.863011 bufsize: 73.0
+memcpy 7.129 GB in 2.040 s, rate: 3.494824 bufsize: 73.0
+memset 14.258 GB in 7.535 s, rate: 1.892087 bufsize: 73.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=77594624 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=77594624 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 77594624 (74.0 MB, 75776 KB)
-memcpy 7.227 GB in 2.079 s, rate: 3.476525 bufsize: 74.0
-memset 14.453 GB in 7.771 s, rate: 1.859800 bufsize: 74.0
+memcpy 7.227 GB in 2.119 s, rate: 3.410381 bufsize: 74.0
+memset 14.453 GB in 7.712 s, rate: 1.874059 bufsize: 74.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=79691776 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=79691776 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 79691776 (76.0 MB, 77824 KB)
-memcpy 7.422 GB in 2.097 s, rate: 3.538563 bufsize: 76.0
-memset 14.844 GB in 7.954 s, rate: 1.866262 bufsize: 76.0
+memcpy 7.422 GB in 2.146 s, rate: 3.457715 bufsize: 76.0
+memset 14.844 GB in 7.903 s, rate: 1.878193 bufsize: 76.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=104857600 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=104857600 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 104857600 (100.0 MB, 102400 KB)
-memcpy 9.766 GB in 2.868 s, rate: 3.404708 bufsize: 100.0
-memset 19.531 GB in 10.463 s, rate: 1.866626 bufsize: 100.0
+memcpy 9.766 GB in 2.857 s, rate: 3.418532 bufsize: 100.0
+memset 19.531 GB in 10.643 s, rate: 1.835060 bufsize: 100.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=134217728 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=134217728 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 134217728 (128.0 MB, 131072 KB)
-memcpy 12.500 GB in 3.801 s, rate: 3.288408 bufsize: 128.0
-memset 25.000 GB in 13.844 s, rate: 1.805796 bufsize: 128.0
+memcpy 12.500 GB in 3.577 s, rate: 3.494422 bufsize: 128.0
+memset 25.000 GB in 14.075 s, rate: 1.776197 bufsize: 128.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=167772160 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=167772160 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 167772160 (160.0 MB, 163840 KB)
-memcpy 15.625 GB in 4.509 s, rate: 3.465088 bufsize: 160.0
-memset 31.250 GB in 17.057 s, rate: 1.832110 bufsize: 160.0
+memcpy 15.625 GB in 4.615 s, rate: 3.385402 bufsize: 160.0
+memset 31.250 GB in 17.185 s, rate: 1.818465 bufsize: 160.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=201326592 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=201326592 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 201326592 (192.0 MB, 196608 KB)
-memcpy 18.750 GB in 5.520 s, rate: 3.396918 bufsize: 192.0
-memset 37.500 GB in 20.483 s, rate: 1.830781 bufsize: 192.0
+memcpy 18.750 GB in 5.434 s, rate: 3.450462 bufsize: 192.0
+memset 37.500 GB in 20.654 s, rate: 1.815658 bufsize: 192.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=234881024 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=234881024 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 234881024 (224.0 MB, 229376 KB)
-memcpy 21.875 GB in 6.574 s, rate: 3.327316 bufsize: 224.0
-memset 43.750 GB in 24.119 s, rate: 1.813891 bufsize: 224.0
+memcpy 21.875 GB in 6.643 s, rate: 3.292988 bufsize: 224.0
+memset 43.750 GB in 24.056 s, rate: 1.818675 bufsize: 224.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=268435456 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=268435456 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 268435456 (256.0 MB, 262144 KB)
-memcpy 25.000 GB in 7.464 s, rate: 3.349288 bufsize: 256.0
-memset 50.000 GB in 27.550 s, rate: 1.814889 bufsize: 256.0
+memcpy 25.000 GB in 7.772 s, rate: 3.216741 bufsize: 256.0
+memset 50.000 GB in 27.661 s, rate: 1.807617 bufsize: 256.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=335544320 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=335544320 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 335544320 (320.0 MB, 327680 KB)
-memcpy 31.250 GB in 9.174 s, rate: 3.406224 bufsize: 320.0
-memset 62.500 GB in 34.055 s, rate: 1.835265 bufsize: 320.0
+memcpy 31.250 GB in 9.421 s, rate: 3.316931 bufsize: 320.0
+memset 62.500 GB in 34.433 s, rate: 1.815108 bufsize: 320.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=402653184 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=402653184 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 402653184 (384.0 MB, 393216 KB)
-memcpy 37.500 GB in 11.464 s, rate: 3.270986 bufsize: 384.0
-memset 75.000 GB in 41.029 s, rate: 1.827979 bufsize: 384.0
+memcpy 37.500 GB in 11.454 s, rate: 3.274053 bufsize: 384.0
+memset 75.000 GB in 40.938 s, rate: 1.832029 bufsize: 384.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=469762048 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=469762048 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 469762048 (448.0 MB, 458752 KB)
-memcpy 43.750 GB in 13.136 s, rate: 3.330657 bufsize: 448.0
-memset 87.500 GB in 47.811 s, rate: 1.830117 bufsize: 448.0
+memcpy 43.750 GB in 13.522 s, rate: 3.235528 bufsize: 448.0
+memset 87.500 GB in 47.914 s, rate: 1.826196 bufsize: 448.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=536870912 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=536870912 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 536870912 (512.0 MB, 524288 KB)
-memcpy 50.000 GB in 15.163 s, rate: 3.297525 bufsize: 512.0
-memset 100.000 GB in 54.965 s, rate: 1.819356 bufsize: 512.0
+memcpy 50.000 GB in 15.288 s, rate: 3.270461 bufsize: 512.0
+memset 100.000 GB in 54.235 s, rate: 1.843843 bufsize: 512.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=805306368 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=805306368 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 805306368 (768.0 MB, 786432 KB)
-memcpy 75.000 GB in 23.521 s, rate: 3.188670 bufsize: 768.0
-memset 150.000 GB in 80.399 s, rate: 1.865687 bufsize: 768.0
+memcpy 75.000 GB in 22.541 s, rate: 3.327250 bufsize: 768.0
+memset 150.000 GB in 81.337 s, rate: 1.844172 bufsize: 768.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=1073741824 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1073741824 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 1073741824 (1024.0 MB, 1048576 KB)
-memcpy 100.000 GB in 30.635 s, rate: 3.264273 bufsize: 1024.0
-memset 200.000 GB in 107.789 s, rate: 1.855484 bufsize: 1024.0
+memcpy 100.000 GB in 30.443 s, rate: 3.284817 bufsize: 1024.0
+memset 200.000 GB in 110.738 s, rate: 1.806071 bufsize: 1024.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=1342177280 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1107296256 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1107296256 (1056.0 MB, 1081344 KB)
+memcpy 103.125 GB in 31.946 s, rate: 3.228061 bufsize: 1056.0
+memset 206.250 GB in 110.993 s, rate: 1.858231 bufsize: 1056.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1140850688 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1140850688 (1088.0 MB, 1114112 KB)
+memcpy 106.250 GB in 32.354 s, rate: 3.283988 bufsize: 1088.0
+memset 212.500 GB in 114.179 s, rate: 1.861110 bufsize: 1088.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1174405120 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1174405120 (1120.0 MB, 1146880 KB)
+memcpy 109.375 GB in 34.607 s, rate: 3.160511 bufsize: 1120.0
+memset 218.750 GB in 117.781 s, rate: 1.857267 bufsize: 1120.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1207959552 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1207959552 (1152.0 MB, 1179648 KB)
+memcpy 112.500 GB in 35.185 s, rate: 3.197402 bufsize: 1152.0
+memset 225.000 GB in 121.572 s, rate: 1.850749 bufsize: 1152.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1241513984 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1241513984 (1184.0 MB, 1212416 KB)
+memcpy 115.625 GB in 35.724 s, rate: 3.236613 bufsize: 1184.0
+memset 231.250 GB in 125.908 s, rate: 1.836660 bufsize: 1184.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1275068416 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1275068416 (1216.0 MB, 1245184 KB)
+memcpy 118.750 GB in 36.976 s, rate: 3.211510 bufsize: 1216.0
+memset 237.500 GB in 129.042 s, rate: 1.840483 bufsize: 1216.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1308622848 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ set +x
+BYTES: 1308622848 (1248.0 MB, 1277952 KB)
+memcpy 121.875 GB in 38.023 s, rate: 3.205303 bufsize: 1248.0
+memset 243.750 GB in 132.303 s, rate: 1.842363 bufsize: 1248.0
+
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1342177280 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 1342177280 (1280.0 MB, 1310720 KB)
-memcpy 125.000 GB in 46.236 s, rate: 2.703512 bufsize: 1280.0
-memset 250.000 GB in 140.117 s, rate: 1.784221 bufsize: 1280.0
+memcpy 125.000 GB in 38.342 s, rate: 3.260172 bufsize: 1280.0
+memset 250.000 GB in 137.698 s, rate: 1.815566 bufsize: 1280.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=1610612736 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1610612736 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 1610612736 (1536.0 MB, 1572864 KB)
-memcpy 150.000 GB in 57.787 s, rate: 2.595745 bufsize: 1536.0
-memset 300.000 GB in 169.602 s, rate: 1.768848 bufsize: 1536.0
+memcpy 150.000 GB in 46.324 s, rate: 3.238031 bufsize: 1536.0
+memset 300.000 GB in 162.131 s, rate: 1.850357 bufsize: 1536.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=1879048192 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=1879048192 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 1879048192 (1792.0 MB, 1835008 KB)
-memcpy 175.000 GB in 71.983 s, rate: 2.431145 bufsize: 1792.0
-memset 350.000 GB in 196.219 s, rate: 1.783722 bufsize: 1792.0
+memcpy 175.000 GB in 54.102 s, rate: 3.234627 bufsize: 1792.0
+memset 350.000 GB in 189.901 s, rate: 1.843069 bufsize: 1792.0
 
-++ gcc -std=c99 -O2 -DTRIALS=100 -DBYTES=2147483648 -DDO_MEMSET totalrecall.c -o totalrecall.exe
+++ gcc -std=c99 -O2 -DNTRIALS=100 -DBYTES=2147483648 -DDO_MEMSET totalrecall.c -o totalrecall.exe
 ++ set +x
 BYTES: 2147483648 (2048.0 MB, 2097152 KB)
-memcpy 200.000 GB in 80.194 s, rate: 2.493955 bufsize: 2048.0
-memset 400.000 GB in 226.802 s, rate: 1.763652 bufsize: 2048.0
+memcpy 200.000 GB in 59.515 s, rate: 3.360501 bufsize: 2048.0
+memset 400.000 GB in 215.264 s, rate: 1.858182 bufsize: 2048.0
 
