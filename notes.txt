@@ -1,0 +1,38 @@
+***  on ryzen, noting the jump in -O between 1024 & 1056 MB ...
+[udptester@greg-ryzen totalrecall]$ gcc -std=c99 -Os -DNTRIALS=100 -DBYTES=1073741824 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+[udptester@greg-ryzen totalrecall]$ nm -C totalrecall.exe | grep mem
+[udptester@greg-ryzen totalrecall]$ gcc -std=c99 -Os -DNTRIALS=100 -DBYTES=1107296256 -DDO_MEMSET -DDO_RAMDISK '-DRAMDISK_FILE="/mnt/ramdisk/test"' totalrecall.c -o totalrecall.exe
+[udptester@greg-ryzen totalrecall]$ nm -C totalrecall.exe | grep mem
+                 U memcpy@@GLIBC_2.14
+                 U memset@@GLIBC_2.2.5
+
+* all of the -O0 & -O2 include the syscalls
+
+
+*** syscall tracing with perf
+[udptester@greg-ryzen totalrecall]$ gcc -g -std=c99 -O0 -DNTRIALS=100 -DBYTES=1073741824 -DFOREVER totalrecall.c -o totalrecall.exe
+[root@greg-ryzen totalrecall]# perf record -g  --call-graph dwarf -F 99 -a -- ./totalrecall.exe
+^C
+[root@greg-ryzen totalrecall]#  perf report -g graph -i perf.data --stdio
+* memcpy uses _memmove_avx_unaligned_erms, _memmove_sse_unaligned_erms
+* see also (NB thresholds there seem much small than the numbers at the jumps ...):
+https://stackoverflow.com/questions/51614543/perf-report-shows-this-function-memset-avx2-unaligned-erms-has-overhead-doe
+https://squadrick.dev/journal/going-faster-than-memcpy.html
+
+*** from glibc/sysdeps/x86/cacheinfo.c
+  /* The large memcpy micro benchmark in glibc shows that 6 times of
+     shared cache size is the approximate value above which non-temporal
+     store becomes faster on a 8-core processor.  This is the 3/4 of the
+     total shared cache size.  */
+  __x86_shared_non_temporal_threshold
+    = (cpu_features->non_temporal_threshold != 0
+       ? cpu_features->non_temporal_threshold
+       : __x86_shared_cache_size * threads * 3 / 4);
+}
+* ryzen cpuinfo (8 physical cores)
+TLB size	: 3072 4K pages
+$ echo "6*3072*4096" | bc 
+75497472
+* seems to correpond to the jump ...
+$ echo "72*1024*1024" | bc -l 
+75497472
